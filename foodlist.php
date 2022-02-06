@@ -7,6 +7,38 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
 
 ?>
 
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["F_ID"]))
+{
+  if(isset($_POST["hidden_RID"]) && count(array($_SESSION["cart"])) >= 1)
+  {
+  var_dump($_SESSION["cart"][0]["R_ID"]);
+  var_dump(count(array($_SESSION["cart"])));
+  // var_dump($_SESSION["cart"][count(array($_SESSION["cart"])) - 1]);
+  // var_dump($_SESSION["cart"][count(array($_SESSION["cart"])) - 1][R_ID]);
+
+    if($_POST["hidden_RID"] == $_SESSION["cart"][count(array($_SESSION["cart"])) - 1]["R_ID"])
+    {
+      echo "
+      <script>
+      const form = document.getElementById(\"cart\");
+      form.action = \"/cart.php?action=add&id=" . $_POST['F_ID'] .  " \";
+      form.submit();
+      </script>";
+      // header("Location:cart.php?". $_SERVER['QUERY_STRING']);
+    }
+    else
+    {
+      echo "MADARCHOD ORDER SAME KAR BSDK";
+    }
+  }
+  else
+  {
+    echo "<p>kn mila lavde!!</p>";
+  }
+}
+
+?>
 
 <html>
 
@@ -198,16 +230,18 @@ $R_namesql = "SELECT RESTAURANTS.name FROM RESTAURANTS, FOOD WHERE FOOD.F_ID=RES
 $R_nameresult = mysqli_query($conn,$R_namesql);
 $R_namers = mysqli_fetch_array($R_nameresult, MYSQLI_BOTH);
 $R_name = $R_namers['R_name'];
+cart.php?action=add&id=<?php echo $row["F_ID"]; ?>
+cart.php?action=add&id=<?php echo $row["F_ID"]; ?>
 */
 if (mysqli_num_rows($result) > 0)
 {
 
-  while($row = mysqli_fetch_assoc($result)){
+  while($row = mysqli_fetch_assoc($result))
+  {
 
 ?>
 <div class="col-md-4">
-
-<form method="post" action="cart.php?action=add&id=<?php echo $row["F_ID"]; ?>">
+<form method="post" action="/food/foodlist.php?id=<?php echo $row["R_ID"]; ?>" id = "cart">
 <div class="mypanel" align="center";>
 <img src="<?php echo $row["images_path"]; ?>" class="img-responsive">
 <h5 class="text-info"><?php echo $row["name"]; ?></h5>
@@ -216,11 +250,11 @@ if (mysqli_num_rows($result) > 0)
 <h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> </h5>
 <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
-<input type="hidden" name="hidden_RID" value="<?php echo $row["R_ID"]; ?>">
+<input type="hidden" name="F_ID" value="<?php echo $row["F_ID"]; ?>">
+<input type="text" name="hidden_RID" value="<?php echo $row["R_ID"]; ?>" style="display:none">
 <input type="submit" name="add" style="margin-top:5px;" class="btn btn-success" value="Add to Cart">
 </div>
 </form>
-
 
 </div>
 

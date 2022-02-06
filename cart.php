@@ -180,7 +180,7 @@ $total = $total + ($values["food_quantity"] * $values["food_price"]);
 </tr>
 </table>
 <?php
-  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="foodlist.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
+  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="restaurantList.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
 ?>
 </div>
 <br><br><br><br><br><br><br>
@@ -244,7 +244,7 @@ if($counter == 0 && empty($_SESSION["cart"]))
   <div class="container">
       <div class="jumbotron">
         <h1>Your Shopping Cart</h1>
-        <p>Oops! We can't smell any food here. Go back and <a href="foodlist.php">order now.</a></p>
+        <p>Oops! We can't smell any food here. Go back and <a href="restaurantList.php">order now.</a></p>
 
       </div>
 

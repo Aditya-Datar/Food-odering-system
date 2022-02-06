@@ -14,7 +14,7 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
     <title> Explore | Food Heaven </title>
   </head>
 
-  <link rel="stylesheet" type = "text/css" href ="css/foodlist.css">
+  <link rel="stylesheet" type = "text/css" href ="css/restaurantList.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -84,7 +84,7 @@ else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
+            <li class="active" ><a href="restaurantList.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
             <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart  (<?php
               if(isset($_SESSION["cart"])){
               $count = count($_SESSION["cart"]);
