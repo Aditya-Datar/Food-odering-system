@@ -89,11 +89,11 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 <div class="container">
     <div class="container">
     	<div class="col">
-    		
+
     	</div>
     </div>
 
-    
+
     	<div class="col-xs-3" style="text-align: center;">
 
     	<div class="list-group">
@@ -105,10 +105,10 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
         <a href="view_order_details.php" class="list-group-item ">View Order Details</a>
     	</div>
     </div>
-    
 
 
-    
+
+
     <div class="col-xs-9">
       <div class="form-area" style="padding: 0px 100px 100px 100px;">
         <form action="myrestaurant1.php" method="POST">
@@ -121,7 +121,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 
           <div class="form-group">
             <input type="email" class="form-control" id="email" name="email" placeholder="Your Restaurant's Email" required="">
-          </div>     
+          </div>
 
           <div class="form-group">
             <input type="text" class="form-control" id="contact" name="contact" placeholder="Your Restaurant's Contact Number" required="">
@@ -132,13 +132,18 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
           </div>
 
           <div class="form-group">
-          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right"> ADD RESTAURANT </button>    
+            <input type="text" class="form-control" id="image" name="image" placeholder="Image Path" required="">
+          </div>
+
+
+          <div class="form-group">
+          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right"> ADD RESTAURANT </button>
       </div>
         </form>
 
-        
+
         </div>
-      
+
     </div>
 </div>
 
@@ -147,7 +152,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
   <p> Food Heaven 2021 </p>
-  
+
   <br>
   </footer> -->
 </html>

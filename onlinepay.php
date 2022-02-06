@@ -84,12 +84,12 @@ else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
+            <li><a href="restaurantList.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
             <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
              (<?php
               if(isset($_SESSION["cart"])){
-              $count = count($_SESSION["cart"]); 
-              echo "$count"; 
+              $count = count($_SESSION["cart"]);
+              echo "$count";
             }
               else
                 echo "0";
@@ -97,7 +97,7 @@ else if (isset($_SESSION['login_user2'])) {
               </a></li>
             <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
           </ul>
-  <?php        
+  <?php
 }
 else {
 
@@ -200,10 +200,10 @@ else {
                         </div>
                         <div class="row ">
                             <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
-                             <a href="payment.php"><input type="submit" class="btn btn-danger btn-block" value="CANCEL" required="" /></a>   
+                             <a href="payment.php"><input type="submit" class="btn btn-danger btn-block" value="CANCEL" required="" /></a>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
-                              <a href="COD.php"><input type="submit" class="btn btn-success btn-block" value="PAY NOW" required="" /></a>  
+                              <a href="COD.php"><input type="submit" class="btn btn-success btn-block" value="PAY NOW" required="" /></a>
                             </div>
                         </div>
 
@@ -221,7 +221,7 @@ else {
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
   <p> Food Heaven 2021</p>
- 
+
   <br>
   </footer> -->
 </html>

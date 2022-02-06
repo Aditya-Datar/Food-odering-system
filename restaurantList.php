@@ -1,23 +1,24 @@
 <?php
 session_start();
-require 'connection.php';
-$conn = Connect();
+
 if(!isset($_SESSION['login_user2'])){
 header("location: customerlogin.php"); //Redirecting to myrestaurant Page
 }
+
 ?>
+
 
 <html>
 
   <head>
-    <title> Cart | Food Heaven </title>
+    <title> Explore | Food Heaven </title>
   </head>
 
-  <link rel="stylesheet" type = "text/css" href ="css/payment.css">
+  <link rel="stylesheet" type = "text/css" href ="css/foodlist.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
-  <link rel="stylesheet" type = "text/css" href ="css/nav.css">
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type = "text/css" href ="css/nav.css">
 
   <body>
 
@@ -83,17 +84,15 @@ else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li><a href="restaurantList.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
-            <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
-             (<?php
+            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
+            <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart  (<?php
               if(isset($_SESSION["cart"])){
               $count = count($_SESSION["cart"]);
               echo "$count";
             }
               else
                 echo "0";
-              ?>)
-              </a></li>
+              ?>) </a></li>
             <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
           </ul>
   <?php
@@ -130,70 +129,132 @@ else {
       </div>
     </nav>
 
+    <!-- Carousal ================================================================ -->
+    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
+    <!-- Indicators -->
+    <!-- <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol> -->
+    <!-- Wrapper for slides -->
+    <!-- <div class="carousel-inner">
 
+      <div class="item active">
+      <img src="images/slide001.jpg" style="width:100%;">
+      <div class="carousel-caption">
+      </div>
+      </div>
+
+      <div class="item">
+      <img src="images/slide002.jpg" style="width:100%;">
+      <div class="carousel-caption">
+
+      </div>
+      </div>
+      <div class="item">
+      <img src="images/slide003.jpg" style="width:100%;">
+      <div class="carousel-caption">
+
+      </div>
+      </div>
+
+    </div> -->
+    <!-- Left and right controls -->
+    <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div> -->
+<!-- Carousal End -->
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Food Heaven</h1>
+    <p>Let food be thy medicine and medicine be thy food</p>
+  </div>
+<!-- </div> -->
+
+
+
+
+<div class="container" style="width:95%;">
+
+<!-- Display all Food from food table -->
+<?php
+
+require 'connection.php';
+$conn = Connect();
+
+
+
+$sql = "SELECT * FROM restaurants ORDER BY R_ID";
+$result = mysqli_query($conn, $sql);
+/*
+$R_namesql = "SELECT RESTAURANTS.name FROM RESTAURANTS, FOOD WHERE FOOD.F_ID=RESTAURANTS.R_ID";
+$R_nameresult = mysqli_query($conn,$R_namesql);
+$R_namers = mysqli_fetch_array($R_nameresult, MYSQLI_BOTH);
+$R_name = $R_namers['R_name'];
+*/
+if (mysqli_num_rows($result) > 0)
+{
+
+  while($row = mysqli_fetch_assoc($result)){
+?>
+<div class="col-md-4">
+<form method="post" action="foodlist.php?id=<?php echo $row["R_ID"];?>">
+<div class="mypanel" align="center";>
+<img src="<?php echo $row["images_path"]; ?>" class="img-responsive" style="height:300;width:300px">
+<h5 class="text-info"><?php echo $row["name"]; ?></h5>
+<h5 class="text-info"><?php echo $row["address"]; ?></h5>
+<h5 class="text-danger">Contact: <?php echo $row["contact"]; ?></h5>
+<!-- <h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> </h5> -->
+<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
+<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
+<input type="hidden" name="hidden_RID" value="<?php echo $row["R_ID"]; ?>">
+<input type="submit" name="add" style="margin-top:5px;" class="btn btn-success" value="Check Menu">
+</div>
+</form>
+
+
+</div>
 
 <?php
-$gtotal = 0;
-  foreach($_SESSION["cart"] as $keys => $values)
-  {
+}
+}
+else
+{
+  ?>
 
-    $F_ID = $values["food_id"];
-    $foodname = $values["food_name"];
-    $quantity = $values["food_quantity"];
-    $price =  $values["food_price"];
-    $total = ($values["food_quantity"] * $values["food_price"]);
-    $R_ID = $values["R_ID"];
-    $username = $_SESSION["login_user2"];
-    $order_date = date('Y-m-d');
+  <div class="container">
+    <div class="jumbotron">
+      <center>
+         <label style="margin-left: 5px;color: red;"> <h1>Oops! No food is available.</h1> </label>
+        <p>Stay Hungry...! :P</p>
+      </center>
 
-    $gtotal = $gtotal + $total;
+    </div>
+  </div>
 
+  <?php
 
-     $query = "INSERT INTO ORDERS (F_ID, foodname, price,  quantity, order_date, username, R_ID)
-              VALUES ('" . $F_ID . "','" . $foodname . "','" . $price . "','" . $quantity . "','" . $order_date . "','" . $username . "','" . $R_ID . "')";
+}
 
+?>
 
-              $success = $conn->query($query);
+<!-- </div> -->
 
-      if(!$success)
-      {
-        ?>
-        <div class="container">
-          <div class="jumbotron">
-            <h1>Something went wrong!</h1>
-            <p>Try again later.</p>
-          </div>
-        </div>
-
-        <?php
-      }
-
-  }
-
-        ?>
-        <div class="container">
-          <div class="jumbotron">
-            <h1>Choose your payment option</h1>
-          </div>
-        </div>
-        <br>
-<h1 class="text-center">Grand Total: &#8377;<?php echo "$gtotal"; ?>/-</h1>
-<h5 class="text-center">including all service charges. (no delivery charges applied)</h5>
-<br>
-<h1 class="text-center">
-  <a href="cart.php"><button class="btn btn-warning"><span class="glyphicon glyphicon-circle-arrow-left"></span> Go back to cart</button></a>
-  <!-- <a href="onlinepay.php"><button class="btn btn-success"><span class="glyphicon glyphicon-credit-card"></span> Pay Online</button></a> -->
-  <a href="COD.php"><button class="btn btn-success"><span class="glyphicon glyphicon-"></span> Cash On Delivery</button></a>
-</h1>
-
-
-
-<br><br><br><br><br><br>
-        </body>
-
-  <!-- <footer class="container-fluid bg-4 text-center">
+</body>
+<!--
+  <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021 </p>
+  <p> Food Heaven 2021</p>
+
   <br>
-  </footer> -->
+  </footer>
+-->
 </html>

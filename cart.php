@@ -83,12 +83,12 @@ else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
-            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
+            <li><a href="restaurantList.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
+            <li class="active" ><a href="restaurantList.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
              (<?php
               if(isset($_SESSION["cart"])){
-              $count = count($_SESSION["cart"]); 
-              echo "$count"; 
+              $count = count($_SESSION["cart"]);
+              echo "$count";
             }
               else
                 echo "0";
@@ -96,7 +96,7 @@ else if (isset($_SESSION['login_user2'])) {
               </a></li>
             <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
           </ul>
-  <?php        
+  <?php
 }
 else {
 
@@ -130,7 +130,7 @@ else {
       </div>
     </nav>
 
-    
+
 <?php
 if(!empty($_SESSION["cart"]))
 {
@@ -139,9 +139,9 @@ if(!empty($_SESSION["cart"]))
       <div class="jumbotron">
         <h1>Your Shopping Cart</h1>
         <p>Looks tasty...!!!</p>
-        
+
       </div>
-      
+
     </div>
     <div class="table-responsive" style="padding-left: 100px; padding-right: 100px;" >
 <table class="table table-striped">
@@ -156,7 +156,7 @@ if(!empty($_SESSION["cart"]))
 </thead>
 
 
-<?php  
+<?php
 
 $total = 0;
 foreach($_SESSION["cart"] as $keys => $values)
@@ -169,7 +169,7 @@ foreach($_SESSION["cart"] as $keys => $values)
 <td>&#8377; <?php echo number_format($values["food_quantity"] * $values["food_price"], 2); ?></td>
 <td><a href="cart.php?action=delete&id=<?php echo $values["food_id"]; ?>"><span class="text-danger">Remove</span></a></td>
 </tr>
-<?php 
+<?php
 $total = $total + ($values["food_quantity"] * $values["food_price"]);
 }
 ?>
@@ -180,7 +180,7 @@ $total = $total + ($values["food_quantity"] * $values["food_price"]);
 </tr>
 </table>
 <?php
-  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="foodlist.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
+  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="restaurantList.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
 ?>
 </div>
 <br><br><br><br><br><br><br>
@@ -192,10 +192,10 @@ if(empty($_SESSION["cart"]))
   <div class="container">
       <div class="jumbotron">
         <h1>Your Shopping Cart</h1>
-        <p>Oops! We can't smell any food here. Go back and <a href="foodlist.php">order now.</a></p>
-        
+        <p>Oops! We can't smell any food here. Go back and <a href="restaurantList.php">order now.</a></p>
+
       </div>
-      
+
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <?php
@@ -287,7 +287,7 @@ echo '<script>window.location="cart.php"</script>';
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
   <p> Food Heaven 2021 </p>
- 
+
   <br>
   </footer> -->
 </html>

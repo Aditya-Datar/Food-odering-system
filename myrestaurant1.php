@@ -12,9 +12,10 @@ $name = $conn->real_escape_string($_POST['name']);
 $email = $conn->real_escape_string($_POST['email']);
 $contact = $conn->real_escape_string($_POST['contact']);
 $address = $conn->real_escape_string($_POST['address']);
+$image_path = $conn->real_escape_string($_POST['image']);
 
 
-$query = "INSERT INTO RESTAURANTS(name,email,contact,address,M_ID) VALUES('" . $name . "','" . $email . "','" . $contact . "','" . $address ."','" . $_SESSION['login_user1'] ."')";
+$query = "INSERT INTO RESTAURANTS(name,email,contact,address,M_ID,images_path) VALUES('" . $name . "','" . $email . "','" . $contact . "','" . $address ."','" . $_SESSION['login_user1'] ."','" . $image_path . "')";
 $success = $conn->query($query);
 
 if (!$success){
@@ -89,7 +90,7 @@ if (!$success){
 		<p>Go back to your <a href="view_food_items.php">Restaurant</a></p>
 	</div>
 </div>
-	
+
 	</body>
 	</html>
 

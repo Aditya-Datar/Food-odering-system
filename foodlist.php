@@ -14,7 +14,7 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
     <title> Explore | Food Heaven </title>
   </head>
 
-  <link rel="stylesheet" type = "text/css" href ="css/foodlist.css">
+  <link rel="stylesheet" type = "text/css" href ="css/restaurantList.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -84,18 +84,18 @@ else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
+            <li class="active" ><a href="restaurantList.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
             <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart  (<?php
               if(isset($_SESSION["cart"])){
-              $count = count($_SESSION["cart"]); 
-              echo "$count"; 
+              $count = count($_SESSION["cart"]);
+              echo "$count";
             }
               else
                 echo "0";
               ?>) </a></li>
             <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
           </ul>
-  <?php        
+  <?php
 }
 else {
 
@@ -155,10 +155,10 @@ else {
       <div class="item">
       <img src="images/slide003.jpg" style="width:100%;">
       <div class="carousel-caption">
-      
+
       </div>
       </div>
-    
+
     </div> -->
     <!-- Left and right controls -->
     <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -174,7 +174,7 @@ else {
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Food Heaven</h1>      
+    <h1>Food Heaven</h1>
     <p>Let food be thy medicine and medicine be thy food</p>
   </div>
 <!-- </div> -->
@@ -191,8 +191,7 @@ require 'connection.php';
 $conn = Connect();
 
 
-
-$sql = "SELECT * FROM FOOD ORDER BY F_ID";
+$sql = "SELECT * FROM FOOD WHERE R_ID = " . $_GET["id"] . " ORDER BY F_ID";
 $result = mysqli_query($conn, $sql);
 /*
 $R_namesql = "SELECT RESTAURANTS.name FROM RESTAURANTS, FOOD WHERE FOOD.F_ID=RESTAURANTS.R_ID";
@@ -221,8 +220,8 @@ if (mysqli_num_rows($result) > 0)
 <input type="submit" name="add" style="margin-top:5px;" class="btn btn-success" value="Add to Cart">
 </div>
 </form>
-      
-     
+
+
 </div>
 
 <?php
@@ -238,7 +237,7 @@ else
          <label style="margin-left: 5px;color: red;"> <h1>Oops! No food is available.</h1> </label>
         <p>Stay Hungry...! :P</p>
       </center>
-       
+
     </div>
   </div>
 
@@ -249,13 +248,13 @@ else
 ?>
 
 </div>
-   
+
 </body>
 <!--
   <footer class="container-fluid bg-4 text-center">
   <br>
   <p> Food Heaven 2021</p>
-  
+
   <br>
   </footer>
 -->

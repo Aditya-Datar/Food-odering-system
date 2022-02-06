@@ -2,7 +2,7 @@
 include('login_u.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user2'])){
-header("location: foodlist.php"); //Redirecting to myrestaurant Page
+header("location: restaurantList.php"); //Redirecting to myrestaurant Page
 }
 ?>
 
@@ -71,7 +71,7 @@ header("location: foodlist.php"); //Redirecting to myrestaurant Page
                 <ul class="dropdown-menu">
                 <li style = "margin: 10px 0;"> <a href="customersignup.php"> User Sign-up</a></li>
               <li style = "margin: 10px 0;"> <a href="managersignup.php"> Manager Sign-up</a></li>
-      
+
             </ul>
             </li>
 
@@ -79,7 +79,7 @@ header("location: foodlist.php"); //Redirecting to myrestaurant Page
               <ul class="dropdown-menu">
               <li style = "margin: 10px 0;"> <a href="customerlogin.php"> User Login</a></li>
               <li style = "margin: 10px 0;" > <a href="managerlogin.php"> Manager Login</a></li>
-   
+
             </ul>
             </li>
           </ul>
@@ -102,9 +102,9 @@ header("location: foodlist.php"); //Redirecting to myrestaurant Page
       <div class="panel panel-primary">
         <div class="panel-heading"> Login </div>
         <div class="panel-body">
-          
+
         <form action="" method="POST">
-          
+
         <div class="row">
           <div class="form-group col-xs-12">
             <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Username: </label>
@@ -114,7 +114,7 @@ header("location: foodlist.php"); //Redirecting to myrestaurant Page
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span>
               </span> -->
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -126,8 +126,8 @@ header("location: foodlist.php"); //Redirecting to myrestaurant Page
               <!-- <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
             </span> -->
-              
-            </div>           
+
+            </div>
           </div>
         </div>
 
@@ -144,8 +144,8 @@ header("location: foodlist.php"); //Redirecting to myrestaurant Page
         </div>
 
         </form>
-        </div>     
-      </div>      
+        </div>
+      </div>
     </div>
     </div>
 

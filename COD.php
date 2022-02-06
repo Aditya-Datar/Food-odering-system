@@ -85,12 +85,12 @@ else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
+            <li><a href="restaurantList.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
             <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
              (<?php
               if(isset($_SESSION["cart"])){
-              $count = count($_SESSION["cart"]); 
-              echo "$count"; 
+              $count = count($_SESSION["cart"]);
+              echo "$count";
             }
               else
                 echo "0";
@@ -98,7 +98,7 @@ else if (isset($_SESSION['login_user2'])) {
               </a></li>
             <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
           </ul>
-  <?php        
+  <?php
 }
 else {
 
@@ -144,11 +144,11 @@ else {
 <h2 class="text-center"> Thank you for shopping at Food Heaven! The ordering process is now complete.</h2>
 
 
-        
+
 
 
 <br><br>
         </body>
 
-  
+
 </html>

@@ -124,17 +124,18 @@ CREATE TABLE `restaurants` (
   `email` varchar(30) NOT NULL,
   `contact` varchar(30) NOT NULL,
   `address` varchar(50) NOT NULL,
-  `M_ID` varchar(30) NOT NULL
+  `M_ID` varchar(30) NOT NULL,
+  `images_path` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `restaurants`
 --
 
-INSERT INTO `restaurants` (`R_ID`, `name`, `email`, `contact`, `address`, `M_ID`) VALUES
-(1, 'Nikhil\'s Restaurant', 'nikhil@restaurant.com', '7998562145', 'Karnataka', 'aminnikhil073'),
-(2, 'Roshan\'s Restaurant', 'roshan@restaurant.com', '9887546821', 'Bihar', 'roshanraj07'),
-(3, 'Aditi\'s Restaurant', 'aditi@restaurant.com', '7778564231', 'Goa', 'aditi068');
+INSERT INTO `restaurants` (`R_ID`, `name`, `email`, `contact`, `address`, `M_ID`, `images_path`) VALUES
+(1, 'Nikhil\'s Restaurant', 'nikhil@restaurant.com', '7998562145', 'Karnataka', 'aminnikhil073', 'images/artisan.jpg'),
+(2, 'Roshan\'s Restaurant', 'roshan@restaurant.com', '9887546821', 'Bihar', 'roshanraj07', 'images/mcD.jpg'),
+(3, 'Aditi\'s Restaurant', 'aditi@restaurant.com', '7778564231', 'Goa', 'aditi068', 'images/Treat.jpg');
 
 --
 -- Indexes for dumped tables

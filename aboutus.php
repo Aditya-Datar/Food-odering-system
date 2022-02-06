@@ -77,12 +77,12 @@ else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
-            <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart 
+            <li><a href="restaurantList.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
+            <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
             (<?php
               if(isset($_SESSION["cart"])){
-              $count = count($_SESSION["cart"]); 
-              echo "$count"; 
+              $count = count($_SESSION["cart"]);
+              echo "$count";
             }
               else
                 echo "0";
@@ -90,7 +90,7 @@ else if (isset($_SESSION['login_user2'])) {
             </a></li>
             <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
           </ul>
-  <?php        
+  <?php
 }
 else {
 
@@ -101,7 +101,7 @@ else {
                 <ul class="dropdown-menu">
               <li> <a href="customersignup.php"> User Sign-up</a></li>
               <li> <a href="managersignup.php"> Manager Sign-up</a></li>
-          
+
             </ul>
             </li>
 
@@ -123,7 +123,7 @@ else {
     </nav>
 
     <!-- <div class="wide">
-        
+
         <div class="tagline">It's not our <font color="red"><strong>work life</strong></font>, it's our <font color="green"><strong><em>life's work</em>.</strong></font></div>
     </div> -->
 
@@ -133,7 +133,7 @@ else {
     </div>
 
     <div class="col-xs-12 line"><hr></div>
-<!-- 
+<!--
     <div class="col-md-10" style="float: none; margin: 0 auto;">
         <div class="paragraph2">
           <h1><center>A FEW THINGS WE BELIEVE</center></h1>
@@ -141,13 +141,13 @@ else {
           <div class="goldcolor">
           <h2>1. Interrogate the premise.</h2>
           </div>
-          <h3>Test every assumption. Make sure the problems we aim to solve are the right ones.</h3> 
+          <h3>Test every assumption. Make sure the problems we aim to solve are the right ones.</h3>
           </p>
           <p><br>
           <div class="goldcolor">
           <h2>2. Find the opportunity.</h2>
           </div>
-          <h3>Dive head first into research and come up with a strategy that feels like an <strong>AH HA!</strong> moment.</h3> 
+          <h3>Dive head first into research and come up with a strategy that feels like an <strong>AH HA!</strong> moment.</h3>
           </p>
           <p><br>
           <div class="goldcolor">
@@ -179,12 +179,12 @@ else {
         The purpose of <font color="green"><strong>Food heaven</strong></font> is to automate the existing manual system by the help of computerized equipments and full-fledged computer software, fulfilling their requirements, so that their valuable data/information can be stored for a longer period with easy accessing and manipulation of the same. The required software and hardware are easily available and easy to work with.
       </p>
       <p>
-        <font color="green"><strong>Food heaven</strong></font>, as described above, can lead to <font color="green"><strong>error free, secure, reliable and fast management system.</strong></font> It can assist the user to concentrate on their other activities rather to concentrate on the record keeping. Thus it will help organization in better utilization of resources. The organization can maintain computerized records without redundant entries. That means that one need not be distracted by information that is not relevant, while being able to reach the information. 
+        <font color="green"><strong>Food heaven</strong></font>, as described above, can lead to <font color="green"><strong>error free, secure, reliable and fast management system.</strong></font> It can assist the user to concentrate on their other activities rather to concentrate on the record keeping. Thus it will help organization in better utilization of resources. The organization can maintain computerized records without redundant entries. That means that one need not be distracted by information that is not relevant, while being able to reach the information.
       </p>
       <p>
-        <font color="green"><strong>Basically the project describes how to manage for good performance and better services for the clients.</strong></font> 
+        <font color="green"><strong>Basically the project describes how to manage for good performance and better services for the clients.</strong></font>
       </p>
-    </h3>  
+    </h3>
     </div>
 
     <div class="col-xs-12 line"><hr></div>
@@ -192,13 +192,13 @@ else {
     <div class="missionbox">
       <div class="missionfont">
       <strong>Our mission is to ensure nobody has a bad meal.</strong>
-      
+
     </div>
-     
+
     </div>
-    
-  </div>    
-  
+
+  </div>
+
   <div class="paragraph1">
     <h1><strong> We do this by</strong></h1>
     <p><br>
