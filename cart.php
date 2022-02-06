@@ -180,34 +180,23 @@ $total = $total + ($values["food_quantity"] * $values["food_price"]);
 </tr>
 </table>
 <?php
-  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="restaurantList.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
+  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="foodlist.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
 ?>
 </div>
 <br><br><br><br><br><br><br>
 <?php
 }
-if(empty($_SESSION["cart"]))
-{
-  ?>
-  <div class="container">
-      <div class="jumbotron">
-        <h1>Your Shopping Cart</h1>
-        <p>Oops! We can't smell any food here. Go back and <a href="restaurantList.php">order now.</a></p>
 
-      </div>
-
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <?php
-}
 ?>
 
 
 <?php
 
 
+$counter = 0;
 if(isset($_POST["add"]))
 {
+
 if(isset($_SESSION["cart"]))
 {
 $item_array_id = array_column($_SESSION["cart"], "food_id");
@@ -223,6 +212,7 @@ $item_array = array(
 'food_quantity' => $_POST["quantity"]
 );
 $_SESSION["cart"][$count] = $item_array;
+$counter = $counter + 1;
 echo '<script>window.location="cart.php"</script>';
 }
 else
@@ -243,7 +233,24 @@ $item_array = array(
 'food_quantity' => $_POST["quantity"]
 );
 $_SESSION["cart"][0] = $item_array;
+$counter = $counter + 1;
+echo '<script>window.location="cart.php"</script>';
 }
+}
+
+if($counter == 0 && empty($_SESSION["cart"]))
+{
+  ?>
+  <div class="container">
+      <div class="jumbotron">
+        <h1>Your Shopping Cart</h1>
+        <p>Oops! We can't smell any food here. Go back and <a href="foodlist.php">order now.</a></p>
+
+      </div>
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <?php
 }
 if(isset($_GET["action"]))
 {
