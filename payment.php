@@ -16,6 +16,7 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
   <link rel="stylesheet" type = "text/css" href ="css/payment.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
   <link rel="stylesheet" type = "text/css" href ="css/nav.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
@@ -173,15 +174,17 @@ $gtotal = 0;
         ?>
         <div class="container">
           <div class="jumbotron">
-            <h1>Choose your payment option</h1>
+            <h1 style="text-align:center;">Choose your payment option</h1>
           </div>
         </div>
-        <br>
+        <div style="text-align:center">
+          <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4dkca9bw.json"  background="transparent"  speed="1"  style="height: 400px;"  loop autoplay></lottie-player>
+        </div>
 <h1 class="text-center">Grand Total: &#8377;<?php echo "$gtotal"; ?>/-</h1>
 <h5 class="text-center">including all service charges. (no delivery charges applied)</h5>
 <br>
 <h1 class="text-center">
-  <a href="cart.php"><button class="btn btn-warning"><span class="glyphicon glyphicon-circle-arrow-left"></span> Go back to cart</button></a>
+  <a href="cart.php"><button class="btn btn-info"><span class="glyphicon glyphicon-circle-arrow-left"></span> Go back to cart</button></a>
   <!-- <a href="onlinepay.php"><button class="btn btn-success"><span class="glyphicon glyphicon-credit-card"></span> Pay Online</button></a> -->
   <a href="COD.php"><button class="btn btn-success"><span class="glyphicon glyphicon-"></span> Cash On Delivery</button></a>
 </h1>
