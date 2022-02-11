@@ -214,7 +214,6 @@ if (mysqli_num_rows($result) > 0)
 <h5 class="text-danger" style="margin-bottom: 20px;">Contact: <?php echo $row["contact"]; ?></h5>
 <!-- <h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> </h5> -->
 <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
-<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
 <input type="hidden" name="hidden_RID" value="<?php echo $row["R_ID"]; ?>">
 <input type="submit" name="add" style="margin-top:5px;margin-bottom: 20px;" class="btn btn-success" value="Check Menu">
 </div>
