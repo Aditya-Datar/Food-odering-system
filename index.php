@@ -5,7 +5,7 @@ session_start();
 <html>
 
   <head>
-    <title> Home | Food Heaven </title>
+    <title> Home | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
@@ -14,22 +14,22 @@ session_start();
   <link rel="stylesheet" type = "text/css" href ="css/nav.css">
   <style>
     .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-      color: #FC8019;
+      color: #824bb9;
     }
     .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
       color: #fff;
-    background-color: #FC8019;
+    background-color: #824bb9;
     }
     .navbar-inverse .navbar-nav>li>a{
-      color: #FC8019;
+      color: #824bb9;
     }
     .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
       color: #fff;
-    background-color: #FC8019;
+    background-color: #824bb9;
     transition:0.5s;
     }
     .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
-      background-color: #FC8019;
+      background-color: #824bb9;
     }
     .navbar-nav>li>.dropdown-menu{
       border-radius: 10px;
@@ -45,21 +45,21 @@ session_start();
       margin-right: -30px !important;
     }
     .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
-      color: #FC8019;
+      color: #824bb9;
     text-decoration: none;
     background-color: white;
     transition:0.5s;
     }
     .orderblock{
-      border: 2px solid #FC8019;
+      border: 2px solid #824bb9;
       margin-bottom: 30px;
     }
     .btn-success{
-      background-color: #FC8019;
-    border-color: #FC8019;
+      background-color: #824bb9;
+    border-color: #824bb9;
 }
 .btn-success:hover{
-  background-color:#fc8019f0;border-color: #fc8019f0;
+  background-color:#824bb9f0;border-color: #824bb9f0;
 }
 .wide{
   width: 100%;
@@ -80,7 +80,7 @@ session_start();
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: #FC8019;
+    background-color: #824bb9;
     padding: 20px;
     border-radius: 25px;
     display:none;
@@ -129,7 +129,7 @@ top:35%
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -228,7 +228,7 @@ else {
 
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021  </p>
+  <p> DoorDash 2021  </p>
   <p> Creator: DBMS TEAM 7 </p>
   <br>
   </footer> -->

@@ -1,32 +1,32 @@
 <html>
 
   <head>
-    <title> Guest Signup | Food Heaven </title>
+    <title> Guest Signup | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/managersignup.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
   <link rel="stylesheet" type = "text/css" href ="css/index.css">
   <link rel="stylesheet" type = "text/css" href ="css/nav.css">
-  
+
   <style>
     .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-      color: #FC8019;
+      color: #824bb9;
     }
     .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
       color: #fff;
-    background-color: #FC8019;
+    background-color: #824bb9;
     }
     .navbar-inverse .navbar-nav>li>a{
-      color: #FC8019;
+      color: #824bb9;
     }
     .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
       color: #fff;
-    background-color: #FC8019;
+    background-color: #824bb9;
     transition:0.5s;
     }
     .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
-      background-color: #FC8019;
+      background-color: #824bb9;
     }
     .navbar-nav>li>.dropdown-menu{
       border-radius: 10px;
@@ -39,24 +39,24 @@
       border-color: white;
     }
     .give-margin{
-      margin-right: -30px !important;  
+      margin-right: -30px !important;
     }
     .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
-      color: #FC8019;
+      color: #824bb9;
     text-decoration: none;
     background-color: white;
     transition:0.5s;
     }
     .orderblock{
-      border: 2px solid #FC8019;
+      border: 2px solid #824bb9;
       margin-bottom: 30px;
     }
     .btn-success{
-      background-color: #FC8019;
-    border-color: #FC8019;
+      background-color: #824bb9;
+    border-color: #824bb9;
 }
 .btn-success:hover{
-  background-color:#fc8019f0;border-color: #fc8019f0;
+  background-color:#824bb9f0;border-color: #824bb9f0;
 }
 .wide{
   width: 100%;
@@ -77,7 +77,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: #FC8019;
+    background-color: #824bb9;
     padding: 20px;
     border-radius: 25px;
     display:none;
@@ -96,19 +96,19 @@ top:35%
   padding-left: 15px;
 }
 .edit{
-  color: #FC8019;text-shadow: 2px 2px 5px white;
+  color: #824bb9;text-shadow: 2px 2px 5px white;
 }
 .panel-primary>.panel-heading{
-  background-color: #FC8019;
-    border-color: #FC8019;
+  background-color: #824bb9;
+    border-color: #824bb9;
     text-align: center;
 }
 .container .jumbotron, .container-fluid .jumbotron{
   background-color: white;
 }
 .panel-primary{
-  
-  border-color: #FC8019;
+
+  border-color: #824bb9;
 }
 .input-group{
   display: block;
@@ -117,8 +117,8 @@ top:35%
   margin-top: 10px;
 }
 .my-btn{
-  background-color: #FC8019 !important;
-    border-color: #FC8019 !important;
+  background-color: #824bb9 !important;
+    border-color: #824bb9 !important;
 }
 .jumbotron{
   padding-top: 20px;
@@ -128,10 +128,28 @@ top:35%
   padding-right: 15px;
 }
 .input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle{
-  
+
   border-radius: 5px;
 
 }
+
+.panel{
+  border-radius: 8px;
+}
+.panel-primary{
+    border-color: #824bb9;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px;
+}
+.panel-primary>.panel-heading{
+    border-color: white;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
   </style>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -172,7 +190,7 @@ top:35%
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -187,7 +205,7 @@ top:35%
                 <ul class="dropdown-menu">
                 <li style = "margin: 10px 0;"> <a href="customersignup.php"> User Sign-up</a></li>
               <li style = "margin: 10px 0;"> <a href="managersignup.php"> Manager Sign-up</a></li>
-      
+
             </ul>
             </li>
 
@@ -195,7 +213,7 @@ top:35%
               <ul class="dropdown-menu">
               <li style = "margin: 10px 0;"> <a href="customerlogin.php"> User Login</a></li>
               <li style = "margin: 10px 0;" > <a href="managerlogin.php"> Manager Login</a></li>
-   
+
             </ul>
             </li>
           </ul>
@@ -206,7 +224,7 @@ top:35%
 
     <div class="container" style="text-align: center;">
     <div class="jumbotron">
-    <h1>Hi Guest, Welcome to <span class="edit"> FoodHeaven </span></h1>
+    <h1>Hi Guest, Welcome to <span class="edit"> DoorDash </span></h1>
    <h3>Please Login to continue.</h3>
     </div>
     </div>
@@ -219,9 +237,9 @@ top:35%
       <div class="panel panel-primary">
         <div class="panel-heading"> Create Account </div>
         <div class="panel-body">
-          
+
         <form role="form" action="customer_registered_success.php" method="POST">
-         
+
           <div class="row">
           <div class="form-group col-xs-12">
             <label for="fullname"><span class="text-danger" style="margin-right: 5px;">*</span> Full Name: </label>
@@ -231,7 +249,7 @@ top:35%
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span> -->
               </span>
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -244,7 +262,7 @@ top:35%
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span> -->
               </span>
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -257,7 +275,7 @@ top:35%
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></label>
             </span> -->
               </span>
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -269,8 +287,8 @@ top:35%
               <!-- <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></label>
             </span> -->
-              
-            </div>           
+
+            </div>
           </div>
         </div>
 
@@ -283,7 +301,7 @@ top:35%
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-home" aria-hidden="true"></label>
             </span> -->
               </span>
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -295,12 +313,12 @@ top:35%
               <!-- <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
             </span> -->
-              
-            </div>           
+
+            </div>
           </div>
         </div>
 
-        
+
         <div class="row" style = "display: flex;justify-content: center;">
           <div class="form-group col-xs-4" style="text-align: center;">
               <button class="btn btn-primary my-btn" name="submit" type="submit" value=" Login ">Submit</button>
@@ -310,23 +328,23 @@ top:35%
         <div class="text-center">
 
           <label style="margin-left: 5px;">or</label> <br>
-          <label style="margin-left: 5px;">Have an account? <a href="customerlogin.php" style="color: #FC8019;">Login.</a></label>
+          <label style="margin-left: 5px;">Have an account? <a href="customerlogin.php" style="color: #824bb9;">Login.</a></label>
         </div>
-       
+
 
         </form>
 
         </div>
-        
+
       </div>
-      
+
     </div>
     </div>
     </body>
 
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021</p>
+  <p> DoorDash 2021</p>
   <br>
   </footer> -->
 </html>

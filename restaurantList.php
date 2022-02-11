@@ -11,7 +11,7 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
 <html>
 
   <head>
-    <title> Explore | Food Heaven </title>
+    <title> Explore | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/restaurantList.css">
@@ -56,7 +56,7 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -173,8 +173,8 @@ else {
 <!-- Carousal End -->
 
 <div class="jumbotron">
-  <div class="container text-center">
-    <h1>Food Heaven</h1>
+  <div class="container text-center" style="margin-top: 30px;">
+    <h1>DoorDash</h1>
     <p>Let food be thy medicine and medicine be thy food</p>
   </div>
 <!-- </div> -->
@@ -182,7 +182,7 @@ else {
 
 
 
-<div class="container" style="width:95%;">
+<div class="container" style="width:95%;margin-top: 25px;">
 
 <!-- Display all Food from food table -->
 <?php
@@ -205,18 +205,18 @@ if (mysqli_num_rows($result) > 0)
 
   while($row = mysqli_fetch_assoc($result)){
 ?>
-<div class="col-md-4">
-<form method="post" action="foodlist.php?id=<?php echo $row["R_ID"];?>">
+<div class="col-md-4" style="margin-top:40px;">
+<form method="post" action="foodlist.php?id=<?php echo $row["R_ID"];?>" style="background-color: white;border-radius: 15px;">
 <div class="mypanel" align="center";>
-<img src="<?php echo $row["images_path"]; ?>" class="img-responsive" style="height:300;width:300px">
+<img src="<?php echo $row["images_path"]; ?>" class="img-responsive" style="height:300;width:300px;border-radius:40px;margin-top:15px;padding:20px">
 <h5 class="text-info"><?php echo $row["name"]; ?></h5>
 <h5 class="text-info"><?php echo $row["address"]; ?></h5>
-<h5 class="text-danger">Contact: <?php echo $row["contact"]; ?></h5>
+<h5 class="text-danger" style="margin-bottom: 20px;">Contact: <?php echo $row["contact"]; ?></h5>
 <!-- <h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> </h5> -->
 <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
 <input type="hidden" name="hidden_RID" value="<?php echo $row["R_ID"]; ?>">
-<input type="submit" name="add" style="margin-top:5px;" class="btn btn-success" value="Check Menu">
+<input type="submit" name="add" style="margin-top:5px;margin-bottom: 20px;" class="btn btn-success" value="Check Menu">
 </div>
 </form>
 
@@ -252,7 +252,7 @@ else
 <!--
   <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021</p>
+  <p> DoorDash 2021</p>
 
   <br>
   </footer>

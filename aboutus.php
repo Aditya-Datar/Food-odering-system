@@ -50,7 +50,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food </a>
+          <a class="navbar-brand" href="index.php">DoorDash </a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -129,7 +129,7 @@ else {
 
     <div class="paragraph1">
       <h1>OUR TEAM</h1>
-      <h3><p>GROUP MEMBERS</p><p>Zeeshan Mujawar (PA_18)</p><p>Chaitanya Nirfarake (PA_19)</p><p>Shreyanshu Mane (PA_30)</p><p>Ritvik Mittal (PA_35)</p></h3>
+      <h3><p>GROUP MEMBERS</p><p>Zeeshan Mujawar (PA_18)</p><p>Chaitanya Nirfarake (PA_19)</p><p>Aditya Datar (PA_27)</p><p>Udayan Naik (PA_30)</p></h3>
     </div>
 
     <div class="col-xs-12 line"><hr></div>
@@ -153,7 +153,7 @@ else {
           <div class="goldcolor">
             <h2>3. Clients == teammates.</h2>
             </div>
-            <h3>You hired Food heaven, and now we're one team with a shared mission. Let's figure it our together.</h3>
+            <h3>You hired DoorDash, and now we're one team with a shared mission. Let's figure it our together.</h3>
           </p>
           <p><br>
           <div class="goldcolor">
@@ -176,10 +176,10 @@ else {
     <h1><strong> ABOUT US </strong></h1>
     <h3>
       <p>
-        The purpose of <font color="green"><strong>Food heaven</strong></font> is to automate the existing manual system by the help of computerized equipments and full-fledged computer software, fulfilling their requirements, so that their valuable data/information can be stored for a longer period with easy accessing and manipulation of the same. The required software and hardware are easily available and easy to work with.
+        The purpose of <font color="green"><strong>DoorDash</strong></font> is to automate the existing manual system by the help of computerized equipments and full-fledged computer software, fulfilling their requirements, so that their valuable data/information can be stored for a longer period with easy accessing and manipulation of the same. The required software and hardware are easily available and easy to work with.
       </p>
       <p>
-        <font color="green"><strong>Food heaven</strong></font>, as described above, can lead to <font color="green"><strong>error free, secure, reliable and fast management system.</strong></font> It can assist the user to concentrate on their other activities rather to concentrate on the record keeping. Thus it will help organization in better utilization of resources. The organization can maintain computerized records without redundant entries. That means that one need not be distracted by information that is not relevant, while being able to reach the information.
+        <font color="green"><strong>DoorDash</strong></font>, as described above, can lead to <font color="green"><strong>error free, secure, reliable and fast management system.</strong></font> It can assist the user to concentrate on their other activities rather to concentrate on the record keeping. Thus it will help organization in better utilization of resources. The organization can maintain computerized records without redundant entries. That means that one need not be distracted by information that is not relevant, while being able to reach the information.
       </p>
       <p>
         <font color="green"><strong>Basically the project describes how to manage for good performance and better services for the clients.</strong></font>
@@ -214,7 +214,7 @@ else {
 
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food heaven 2021</p>
+  <p> DoorDash 2021</p>
   <br>
   </footer> -->
 </html>

@@ -10,7 +10,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
 <html>
 
   <head>
-    <title> Manager Login | Food Heaven </title>
+    <title> Manager Login | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/managerlogin.css">
@@ -55,7 +55,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -78,7 +78,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
               <ul class="dropdown-menu">
               <li> <a href="customerlogin.php"> User Login</a></li>
               <li> <a href="managerlogin.php"> Manager Login</a></li>
- 
+
             </ul>
             </li>
           </ul>
@@ -88,22 +88,25 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
     </nav>
 
     <div class="container">
-    <div class="jumbotron">
-     <h1>Hi Manager,<br> Welcome to <span class="edit"> FoodHeaven </span></h1>
+    <div class="jumbotron" style="text-align: center;">
+     <h1>Hi Manager,Welcome to <span class="edit"> DoorDash </span></h1>
      <br>
    <p>Kindly LOGIN to continue.</p>
     </div>
     </div>
 
-    <div class="container" style="margin-top: 4%; margin-bottom: 2%;">
-      <div class="col-md-5 col-md-offset-4">
+    <div class="container" style="    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;">
+      <div class="col-md-5">
         <label style="margin-left: 5px;color: red;"><span> <?php echo $error;  ?> </span></label>
       <div class="panel panel-primary">
         <div class="panel-heading"> Login </div>
         <div class="panel-body">
-          
+
         <form action="" method="POST">
-          
+
         <div class="row">
           <div class="form-group col-xs-12">
             <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Username: </label>
@@ -113,7 +116,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span>
               </span> -->
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -125,35 +128,37 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
               <!-- <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
             </span> -->
-              
-            </div>           
+
+            </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="form-group col-xs-4">
+        <div class="row" style="display: flex;
+    justify-content: center;">
+        <div class="form-group" style="text-align: center;">
               <button class="btn btn-primary my-btn" name="submit" type="submit" value=" Login ">Submit</button>
-
           </div>
-
         </div>
-        <label style="margin-left: 5px;">or</label> <br>
-       <label style="margin-left: 5px;"><a href="managersignup.php" style="color: #FC8019;">Create a new account.</a></label>
-       
+        <div class="text-center">
+
+          <label style="margin-left: 5px;">or</label> <br>
+          <label style="margin-left: 5px;">Don't have an account?<a href="managersignup.php" style="color: #824bb9;"> Sign Up</a></label>
+        </div>
+
 
         </form>
 
         </div>
-        
+
       </div>
-      
+
     </div>
     </div>
     </body>
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021</p>
- 
+  <p> DoorDash 2021</p>
+
   <br>
   </footer> -->
 </html>

@@ -12,7 +12,7 @@ unset($_SESSION["cart"]);
 <html>
 
   <head>
-    <title> Cart | Food Heaven </title>
+    <title> Cart | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/COD.css">
@@ -57,7 +57,7 @@ unset($_SESSION["cart"]);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -132,16 +132,18 @@ else {
       </div>
     </nav>
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 
-        <div class="container">
+        <div class="container" style="margin-top:10vh; text-align:center;">
           <div class="jumbotron">
-            <h1 class="text-center" style="color: green;"><span class="glyphicon glyphicon-ok-circle"></span> Order Placed Successfully.</h1>
+          <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_gsigmrhp.json"  background="transparent"  speed="1"  style="height: 300px;"  loop  autoplay></lottie-player>
+            <h1 class="text-center" style="color: green;"> Order Placed Successfully.</h1>
           </div>
         </div>
         <br>
 
-<h2 class="text-center"> Thank you for shopping at Food Heaven! The ordering process is now complete.</h2>
+<h2 class="text-center"> Thank you for shopping at DoorDash! The ordering process is now complete.</h2>
 
 
 

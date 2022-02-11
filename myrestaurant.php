@@ -10,7 +10,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 <html>
 
   <head>
-    <title> Manager Login | Food Heaven </title>
+    <title> Manager Login | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/myrestaurant.css">
@@ -55,7 +55,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -151,7 +151,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021 </p>
+  <p> DoorDash 2021 </p>
 
   <br>
   </footer> -->

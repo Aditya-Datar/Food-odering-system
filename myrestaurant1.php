@@ -65,7 +65,7 @@ if (!$success){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
 	<!-- <a href="https://marketnalys1s.herokuapp.com/"><span class="glyphicon glyphicon-eye-open"></span> Visualize Orders</a> -->
         </div>
 

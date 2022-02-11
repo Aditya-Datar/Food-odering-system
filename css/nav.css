@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-  color: #FC8019;
+  color: #824bb9;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
   color: #fff;
-background-color: #FC8019;
+background-color: #824bb9;
 }
 .navbar-inverse .navbar-nav>li>a{
-  color: #FC8019;
+  color: #824bb9;
 }
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
   color: #fff;
-background-color: #FC8019;
+background-color: #824bb9;
 transition:0.5s;
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
-  background-color: #FC8019;
+  background-color: #824bb9;
 }
 .navbar-nav>li>.dropdown-menu{
   border-radius: 10px;
@@ -27,24 +29,24 @@ text-align: center;
   border-color: white;
 }
 .give-margin{
-  margin-right: -30px !important;  
+  margin-right: -30px !important;
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
-  color: #FC8019;
+  color: #824bb9;
 text-decoration: none;
 background-color: white;
 transition:0.5s;
 }
 .orderblock{
-  border: 2px solid #FC8019;
+  border: 2px solid #824bb9;
   margin-bottom: 30px;
 }
 .btn-success{
-  background-color: #FC8019;
-border-color: #FC8019;
+  background-color: #824bb9;
+border-color: #824bb9;
 }
 .btn-success:hover{
-background-color:#fc8019f0;border-color: #fc8019f0;
+background-color:#824bb9f0;border-color: #824bb9f0;
 }
 .wide{
 width: 100%;
@@ -65,7 +67,7 @@ transform: translate(-50%, -50%);
 position: absolute;
 top: 50%;
 left: 50%;
-background-color: #FC8019;
+background-color: #824bb9;
 padding: 20px;
 border-radius: 25px;
 display:none;
@@ -78,22 +80,22 @@ text-align:center;
 top:35%
 }
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-    color: #FC8019;
+    color: #824bb9;
   }
   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
     color: #fff;
-  background-color: #FC8019;
+  background-color: #824bb9;
   }
   .navbar-inverse .navbar-nav>li>a{
-    color: #FC8019;
+    color: #824bb9;
   }
   .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
     color: #fff;
-  background-color: #FC8019;
+  background-color: #824bb9;
   transition:0.5s;
   }
   .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
-    background-color: #FC8019;
+    background-color: #824bb9;
   }
   .navbar-nav>li>.dropdown-menu{
     border-radius: 10px;
@@ -106,24 +108,24 @@ top:35%
     border-color: white;
   }
   .give-margin{
-    margin-right: -30px !important;  
+    margin-right: -30px !important;
   }
   .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
-    color: #FC8019;
+    color: #824bb9;
   text-decoration: none;
   background-color: white;
   transition:0.5s;
   }
   .orderblock{
-    border: 2px solid #FC8019;
+    border: 2px solid #824bb9;
     margin-bottom: 30px;
   }
   .btn-success{
-    background-color: #FC8019;
-  border-color: #FC8019;
+    background-color: #824bb9;
+  border-color: #824bb9;
 }
 .btn-success:hover{
-background-color:#fc8019f0;border-color: #fc8019f0;
+background-color:#824bb9f0;border-color: #824bb9f0;
 }
 .wide{
 width: 100%;
@@ -144,7 +146,7 @@ text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: #FC8019;
+  background-color: #824bb9;
   padding: 20px;
   border-radius: 25px;
   display:none;
@@ -163,19 +165,19 @@ font-size: 45px;
 padding-left: 15px;
 }
 .edit{
-color: #FC8019;text-shadow: 2px 2px 5px white;
+color: #824bb9;text-shadow: 2px 2px 5px white;
 }
 .panel-primary>.panel-heading{
-background-color: #FC8019;
-  border-color: #FC8019;
+background-color: #824bb9;
+  border-color: #824bb9;
   text-align: center;
 }
 .container .jumbotron, .container-fluid .jumbotron{
-background-color: white;
+background-color: #ffffff;
 }
 .panel-primary{
 
-border-color: #FC8019;
+border-color: #824bb9;
 }
 .input-group{
 display: block;
@@ -184,8 +186,8 @@ display: block;
 margin-top: 10px;
 }
 .my-btn{
-background-color: #FC8019 !important;
-  border-color: #FC8019 !important;
+background-color: #824bb9 !important;
+  border-color: #824bb9 !important;
 }
 .jumbotron{
 padding-top: 20px;
@@ -198,4 +200,21 @@ padding-right: 15px;
 
 border-radius: 5px;
 
+}
+
+.panel{
+  border-radius: 8px;
+}
+.panel-primary{
+    border-color: #824bb9;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px;
+}
+.panel-primary>.panel-heading{
+    border-color: white;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: -1px;
+    margin-right: -1px;
 }

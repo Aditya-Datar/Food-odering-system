@@ -7,43 +7,11 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
 
 ?>
 
-<?php
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["F_ID"]))
-{
-  if(isset($_POST["hidden_RID"]) && count(array($_SESSION["cart"])) >= 1)
-  {
-  var_dump($_SESSION["cart"][0]["R_ID"]);
-  var_dump(count(array($_SESSION["cart"])));
-  // var_dump($_SESSION["cart"][count(array($_SESSION["cart"])) - 1]);
-  // var_dump($_SESSION["cart"][count(array($_SESSION["cart"])) - 1][R_ID]);
-
-    if($_POST["hidden_RID"] == $_SESSION["cart"][count(array($_SESSION["cart"])) - 1]["R_ID"])
-    {
-      echo "
-      <script>
-      const form = document.getElementById(\"cart\");
-      form.action = \"/cart.php?action=add&id=" . $_POST['F_ID'] .  " \";
-      form.submit();
-      </script>";
-      // header("Location:cart.php?". $_SERVER['QUERY_STRING']);
-    }
-    else
-    {
-      echo "MADARCHOD ORDER SAME KAR BSDK";
-    }
-  }
-  else
-  {
-    echo "<p>kn mila lavde!!</p>";
-  }
-}
-
-?>
 
 <html>
 
   <head>
-    <title> Explore | Food Heaven </title>
+    <title> Explore | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/restaurantList.css">
@@ -88,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["F_ID"]))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -206,7 +174,7 @@ else {
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Food Heaven</h1>
+    <h1>DoorDash</h1>
     <p>Let food be thy medicine and medicine be thy food</p>
   </div>
 <!-- </div> -->
@@ -241,7 +209,7 @@ if (mysqli_num_rows($result) > 0)
 
 ?>
 <div class="col-md-4">
-<form method="post" action="/food/foodlist.php?id=<?php echo $row["R_ID"]; ?>" id = "cart">
+<form method="post" action=/food/cart.php?action=add&id=<?php echo $row["F_ID"]; ?>>
 <div class="mypanel" align="center";>
 <img src="<?php echo $row["images_path"]; ?>" class="img-responsive">
 <h5 class="text-info"><?php echo $row["name"]; ?></h5>
@@ -287,7 +255,7 @@ else
 <!--
   <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021</p>
+  <p> DoorDash 2021</p>
 
   <br>
   </footer>

@@ -10,7 +10,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 <html>
 
   <head>
-    <title> Manager Login | Food Heaven </title>
+    <title> Manager Login | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/view_food_items.css">
@@ -55,7 +55,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -88,11 +88,11 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 <div class="container">
     <div class="container">
     	<div class="col">
-    		
+
     	</div>
     </div>
 
-    
+
     	<div class="col-xs-3" style="text-align: center;">
 
     	<div class="list-group">
@@ -104,10 +104,10 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
         <a href="view_order_details.php" class="list-group-item ">View Order Details</a>
     	</div>
     </div>
-    
 
 
-    
+
+
     <div class="col-xs-9">
       <div class="form-area" style="padding: 0px 100px 100px 100px;">
         <form action="" method="POST">
@@ -158,7 +158,7 @@ if (mysqli_num_rows($result) > 0)
       <td><?php echo $row["R_ID"]; ?></td>
     </tr>
   </tbody>
-  
+
   <?php } ?>
   </table>
     <br>
@@ -172,21 +172,21 @@ if (mysqli_num_rows($result) > 0)
 
         </form>
 
-        
+
         </div>
-      
+
     </div>
 </div>
 <br>
 <br>
 <br>
 <br>
-  
+
   </body>
 
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021</p>
+  <p> DoorDash 2021</p>
   <br>
   </footer> -->
 </html>

@@ -42,3 +42,20 @@ footer{
   text-shadow: 2px 2px 5px lightgreen;
   color: green;
 }
+
+.panel{
+  border-radius: 8px;
+}
+.panel-primary{
+    border-color: #824bb9;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px;
+}
+.panel-primary>.panel-heading{
+    border-color: white;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: -1px;
+    margin-right: -1px;
+}

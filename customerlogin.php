@@ -10,7 +10,7 @@ header("location: restaurantList.php"); //Redirecting to myrestaurant Page
 <html>
 
   <head>
-    <title> Guest Login | Food Heaven </title>
+    <title> Guest Login | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/managerlogin.css">
@@ -56,7 +56,7 @@ header("location: restaurantList.php"); //Redirecting to myrestaurant Page
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -90,7 +90,7 @@ header("location: restaurantList.php"); //Redirecting to myrestaurant Page
 
     <div class="container" style="text-align: center;">
     <div class="jumbotron">
-     <h1>Hi Guest, Welcome to <span class="edit"> FoodHeaven </span></h1>
+     <h1>Hi Guest, Welcome to <span class="edit"> DoorDash </span></h1>
    <h3>Please Login to continue.</h3>
     </div>
     </div>
@@ -140,7 +140,7 @@ header("location: restaurantList.php"); //Redirecting to myrestaurant Page
         <div class="text-center">
 
           <label style="margin-left: 5px;">or</label> <br>
-          <label style="margin-left: 5px;">Don't have an account?<a href="customersignup.php" style="color: #FC8019;"> Sign Up</a></label>
+          <label style="margin-left: 5px;">Don't have an account?<a href="customersignup.php" style="color: #824bb9;"> Sign Up</a></label>
         </div>
 
         </form>
@@ -154,7 +154,7 @@ header("location: restaurantList.php"); //Redirecting to myrestaurant Page
 
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021 </p>
+  <p> DoorDash 2021 </p>
   <br>
   </footer> -->
 </html>

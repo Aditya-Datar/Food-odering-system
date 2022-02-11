@@ -1,14 +1,29 @@
 <html>
 
   <head>
-    <title> Manager Signup | Food Heaven </title>
+    <title> Manager Signup | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/managersignup.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
   <link rel="stylesheet" type = "text/css" href ="css/nav.css">
   <style>
-    
+    .panel{
+  border-radius: 8px;
+}
+.panel-primary{
+    border-color: #824bb9;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px;
+}
+.panel-primary>.panel-heading{
+    border-color: white;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
   </style>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -49,7 +64,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -64,7 +79,7 @@
                 <ul class="dropdown-menu">
               <li> <a href="customersignup.php"> User Sign-up</a></li>
               <li> <a href="managersignup.php"> Manager Sign-up</a></li>
-           
+
             </ul>
             </li>
 
@@ -72,7 +87,7 @@
               <ul class="dropdown-menu">
               <li> <a href="customerlogin.php"> User Login</a></li>
               <li> <a href="managerlogin.php"> Manager Login</a></li>
-            
+
             </ul>
             </li>
           </ul>
@@ -81,9 +96,9 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container" style="text-align: center;">
     <div class="jumbotron">
-     <h1>Hi Manager, <br> Welcome to <span class="edit"> FoodHeaven </span></h1>
+     <h1>Hi Manager, Welcome to <span class="edit"> DoorDash </span></h1>
      <br>
    <p>Get started by creating your account</p>
     </div>
@@ -91,14 +106,15 @@
 
 
 
-    <div class="container" style="margin-top: 4%; margin-bottom: 2%;">
-      <div class="col-md-5 col-md-offset-4">
+    <div class="container" style="margin-bottom: 2%;display: flex;
+    justify-content: center;    margin-top: -30px;">
+      <div class="col-md-5">
       <div class="panel panel-primary">
         <div class="panel-heading"> Create Account </div>
         <div class="panel-body">
-          
+
         <form role="form" action="manager_registered_success.php" method="POST">
-         
+
           <div class="row">
           <div class="form-group col-xs-12">
             <label for="fullname"><span class="text-danger" style="margin-right: 5px;">*</span> Full Name: </label>
@@ -108,7 +124,7 @@
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span> -->
               </span>
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -121,7 +137,7 @@
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span>
               </span> -->
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -134,7 +150,7 @@
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></label>
             </span>
               </span> -->
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -147,7 +163,7 @@
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></label>
             </span>
                -->
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -160,7 +176,7 @@
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-home" aria-hidden="true"></label>
             </span>
               </span> -->
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -172,35 +188,38 @@
               <!-- <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
             </span> -->
-              
-            </div>           
+
+            </div>
           </div>
         </div>
 
-        
 
-        <div class="row">
-          <div class="form-group col-xs-4">
-              <button class="btn btn-primary my-btn" type="submit">Submit</button>
+
+        <div class="row" style = "display: flex;justify-content: center;">
+          <div class="form-group col-xs-4" style="text-align: center;">
+              <button class="btn btn-primary my-btn" name="submit" type="submit" value=" Login ">Submit</button>
           </div>
 
         </div>
-        <label style="margin-left: 5px;">or</label> <br>
-       <label style="margin-left: 5px;"><a href="managerlogin.php" style="color: #FC8019;">Have an account? Login.</a></label>
+        <div class="text-center">
+
+          <label style="margin-left: 5px;">or</label> <br>
+          <label style="margin-left: 5px;">Have an account? <a href="managerlogin.php" style="color: #824bb9;">Login.</a></label>
+        </div>
 
         </form>
 
         </div>
-        
+
       </div>
-      
+
     </div>
     </div>
     </body>
 
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021 </p>
+  <p> DoorDash 2021 </p>
   <br>
   </footer> -->
 </html>

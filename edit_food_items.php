@@ -10,13 +10,13 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 <html>
 
   <head>
-    <title> Manager Login | Food Heaven </title>
+    <title> Manager Login | DoorDash </title>
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/edit_food_items.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
   <link rel="stylesheet" type = "text/css" href ="css/nav.css">
-  
+
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
@@ -62,7 +62,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Food Heaven</a>
+          <a class="navbar-brand" href="index.php">DoorDash</a>
         </div>
 
         <div class="collapse navbar-collapse " id="myNavbar">
@@ -97,11 +97,11 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 <div class="container">
     <div class="container">
     	<div class="col">
-    		
+
     	</div>
     </div>
 
-    
+
     	<div class="col-xs-3" style="text-align: center;">
 
     	<div class="list-group">
@@ -113,22 +113,22 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
         <a href="view_order_details.php" class="list-group-item ">View Order Details</a>
     	</div>
     </div>
-    
 
 
-    
-    
+
+
+
 
 <div class="col-xs-3">
 
   <div class="form-area" style="padding: 10px 10px 110px 10px; ">
-  
+
     <div style="text-align: center;">
       <h3>Click On Menu <br><br></h3>
     </div>
     <?php
-   
- 
+
+
 
     if (isset($_GET['submit'])) {
     $F_ID = $_GET['dfid'];
@@ -148,7 +148,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 
       <div class="list-group" style="text-align: center;">
         <?php
-      echo "<b><a href='edit_food_items.php?update= {$row['F_ID']}'>{$row['name']}</a></b>";  
+      echo "<b><a href='edit_food_items.php?update= {$row['F_ID']}'>{$row['name']}</a></b>";
         ?>
       </div>
 
@@ -156,7 +156,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
     <?php
     }
     ?>
-    
+
 
     <?php
     if (isset($_GET['update'])) {
@@ -184,7 +184,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
           <div class="form-group">
             <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Food Name: </label>
             <input type="text" class="form-control" id="dname" name="dname" value=<?php echo $row1['name'];  ?> placeholder="Your Food name" required="">
-          </div>     
+          </div>
 
           <div class="form-group">
             <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Food Price: </label>
@@ -197,7 +197,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
           </div>
 
           <div class="form-group">
-          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right" onclick="display_alert()" value="Display alert box" > Update </button>    
+          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right" onclick="display_alert()" value="Display alert box" > Update </button>
       </div>
         </form>
 
@@ -208,7 +208,7 @@ header('Location: managerlogin.php'); // Redirecting To Home Page
 
 
   ?>
-      
+
   </div>
 
 
@@ -227,7 +227,7 @@ mysqli_close($conn);
 <br>
   <!-- <footer class="container-fluid bg-4 text-center">
   <br>
-  <p> Food Heaven 2021</p>
+  <p> DoorDash 2021</p>
 
   <br>
   </footer> -->

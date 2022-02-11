@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+
 body,
 html {
     height: 100%;
@@ -15,7 +17,7 @@ body {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #FC8019;
+    background-color: #824bb9;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -23,7 +25,7 @@ body {
 }
 
 #myBtn:hover {
-    background-color: #fc8019f0;
+    background-color: #824bb9f0;
     color: white;
 }
 
@@ -45,7 +47,7 @@ body {
     font-size: 50px;
     color: white;
     text-shadow: 2px 2px 5px darkgrey;
-    font-family: "Times New Roman";
+    font-family: 'Roboto', sans-serif;
     transform: translate(-50%, -50%);
     position: absolute;
     top: 40%;
