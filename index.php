@@ -53,6 +53,8 @@ session_start();
     .orderblock{
       border: 2px solid #824bb9;
       margin-bottom: 30px;
+      background-color: #f0eafb;
+      
     }
     .btn-success{
       background-color: #824bb9;
@@ -65,7 +67,7 @@ session_start();
   width: 100%;
     height: 100%;
     height: calc(100%-25px);
-    background-image: url('https://media.istockphoto.com/photos/chinese-food-blank-background-picture-id545286388?k=20&m=545286388&s=612x612&w=0&h=1zAWEuV5W6SoYtErOkWasELFcAWMKgQEBUsNOoH5znc=');
+    background-image: url('https://wallpaperaccess.com/full/826922.jpg');
     background-size: cover;
     justify-content: center;
     display: flex;
@@ -206,15 +208,17 @@ else {
 
     <div class="wide">
       	<div class="col-xs-5 line"><hr></div>
-        <div class="col-xs-2 logo"><img src="images/logo2.jpg"></div>
+        <div class="col-xs-2 logo"> <a href="restaurantList.php"> <img src="images/logo2.jpg"> </a> </div>
+        <!-- <div class="col-xs-2 logo">     <a href="restaurantList.php" <img src="images/logo2.jpg"></a></div> -->
         <div class="col-xs-5 line"><hr></div>
         <div class="tagline">Order From Us</div>
     </div>
     <br>
     <!--<center><img src="images/orderimg.png" alt="image" height="50%"></center>-->
     <div class="orderblock">
-    <h2>Feeling Hungry?</h2>
-    <center><a class="btn btn-success btn-lg" href="customerlogin.php" role="button" > Order Now </a></center>
+      <img src="images/home.jpg" alt="" srcset="" height=160px width=50%>
+    <!-- <h2>Feeling Hungry?</h2>
+    <center><a class="btn btn-success btn-lg" href="customerlogin.php" role="button" > Order Now </a></center> -->
     </div>
 
     <div class="col-xs-12 line"><hr></div>
