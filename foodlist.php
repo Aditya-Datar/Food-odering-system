@@ -173,7 +173,7 @@ else {
 <!-- Carousal End -->
 
 <div class="jumbotron">
-  <div class="container text-center">
+  <div class="container text-center" style="margin-top: 40px;">
     <h1>DoorDash</h1>
     <p>Let food be thy medicine and medicine be thy food</p>
   </div>
@@ -182,7 +182,7 @@ else {
 
 
 
-<div class="container" style="width:95%;">
+<div class="container" style="width:95%;margin-top: 30px;">
 
 <!-- Display all Food from food table -->
 <?php
@@ -209,18 +209,20 @@ if (mysqli_num_rows($result) > 0)
 
 ?>
 <div class="col-md-4">
-<form method="post" action=/food/cart.php?action=add&id=<?php echo $row["F_ID"]; ?>>
+<form method="post" action=/food/cart.php?action=add&id=<?php echo $row["F_ID"]; ?> style="    background-color: white;
+    padding: 20px;
+    border-radius: 20px;">
 <div class="mypanel" align="center";>
-<img src="<?php echo $row["images_path"]; ?>" class="img-responsive">
-<h5 class="text-info"><?php echo $row["name"]; ?></h5>
-<h5 class="text-info"><?php echo $row["description"]; ?></h5>
+<img src="<?php echo $row["images_path"]; ?>" class="img-responsive" style="    border-radius: 40px;">
+<h5 class="text-info"style="margin: 20px 0;"><?php echo $row["name"]; ?></h5>
+<h5 class="text-info"style="margin: 20px 0;"><?php echo $row["description"]; ?></h5>
 <h5 class="text-danger">&#8377; <?php echo $row["price"]; ?>/-</h5>
-<h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> </h5>
+<h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;margin-top: 15px;"> </h5>
 <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
 <input type="hidden" name="F_ID" value="<?php echo $row["F_ID"]; ?>">
 <input type="text" name="hidden_RID" value="<?php echo $row["R_ID"]; ?>" style="display:none">
-<input type="submit" name="add" style="margin-top:5px;" class="btn btn-success" value="Add to Cart">
+<input type="submit" name="add" style="margin-top:5px;margin-bottom: 10px;" class="btn btn-success" value="Add to Cart">
 </div>
 </form>
 

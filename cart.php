@@ -15,6 +15,8 @@ header("location: customerlogin.php"); //Redirecting to myrestaurant Page
 
   <link rel="stylesheet" type = "text/css" href ="css/cart.css">
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" type = "text/css" href ="css/nav.css">
@@ -130,18 +132,27 @@ else {
       </div>
     </nav>
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <?php
 if(!empty($_SESSION["cart"]))
 {
   ?>
-  <div class="container">
-      <div class="jumbotron">
+  <div class="container" style="display:flex;justify-content:center;">
+    <div class="">
+      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_y9phsg3m.json"  background="transparent"  speed="1"  style="width: 300px; height:260px;"  loop  autoplay></lottie-player>
+    </div>
+      <div class="jumbotron" style="align-self:center;margin-left: 40px;">
         <h1>Your Shopping Cart</h1>
         <p>Looks tasty...!!!</p>
 
       </div>
 
+    </div>
+    <div class="container" style=
+    "text-align:right;width: 100%;
+    padding-right: 100px;margin-bottom: 25px;">
+    <a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="restaurantList.php">
     </div>
     <div class="table-responsive" style="padding-left: 100px; padding-right: 100px;" >
 <table class="table table-striped">
@@ -167,7 +178,7 @@ foreach($_SESSION["cart"] as $keys => $values)
 <td><?php echo $values["food_quantity"] ?></td>
 <td>&#8377; <?php echo $values["food_price"]; ?></td>
 <td>&#8377; <?php echo number_format($values["food_quantity"] * $values["food_price"], 2); ?></td>
-<td><a href="cart.php?action=delete&id=<?php echo $values["food_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+<td><a href="cart.php?action=delete&id=<?php echo $values["food_id"]; ?>"><span class="text-danger"><i class="fas fa-trash"></i></span></a></td>
 </tr>
 <?php
 $total = $total + ($values["food_quantity"] * $values["food_price"]);
@@ -180,7 +191,7 @@ $total = $total + ($values["food_quantity"] * $values["food_price"]);
 </tr>
 </table>
 <?php
-  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="restaurantList.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
+  echo '<button class="btn btn-info">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
 ?>
 </div>
 <br><br><br><br><br><br><br>
@@ -243,6 +254,7 @@ if($counter == 0 && empty($_SESSION["cart"]))
   ?>
   <div class="container">
       <div class="jumbotron">
+
         <h1>Your Shopping Cart</h1>
         <p>Oops! We can't smell any food here. Go back and <a href="restaurantList.php">order now.</a></p>
 
